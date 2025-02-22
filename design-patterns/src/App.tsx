@@ -1,9 +1,5 @@
 import "./App.css";
 
-import GamesInfo from "./components/layout/modal/GamesInfo";
-import Modal from "./components/layout/modal/Modal";
-import { games } from "./data";
-
 // split screen imports
 // import SplitScreen from "./components/layout/split-screen/SplitScreen";
 // import Right from "./components/layout/split-screen/Right";
@@ -15,10 +11,21 @@ import { games } from "./data";
 // import GamesInfo from "./components/layout/list-data/GamesInfo";
 // import { games, movies } from "./data";
 
+// modal imports
+// import GamesInfo from "./components/layout/modal/GamesInfo";
+// import Modal from "./components/layout/modal/Modal";
+// import { games } from "./data";
+
+// container imports
+// import TodoList, { Todo } from "./components/container/TodoList";
+// import CommentsList, { Comment } from "./components/container/CommentList";
+// import DataSource from "./components/container/DataSource";
+// import { getServerData } from "./lib";
+
 const App = () => {
   return (
     <>
-      {/* Layout Component */}
+      {/* Layout Pattern*/}
 
       {/* Split Screen */}
       {/* <SplitScreen leftWeight={15} rightWeight={80}>
@@ -40,9 +47,32 @@ const App = () => {
         />
       </div> */}
 
-      <Modal>
+      {/* <Modal>
         <GamesInfo data={games} />
-      </Modal>
+      </Modal> */}
+
+      {/* Container Pattern*/}
+
+      {/* <div className="flex flex-col gap-4">
+        <DataSource
+          getData={() =>
+            getServerData<Todo>("https://jsonplaceholder.typicode.com/todos/1")
+          }
+          resourceName="todo"
+        >
+          <TodoList />
+        </DataSource>
+        <DataSource
+          getData={() =>
+            getServerData<Comment>(
+              "https://jsonplaceholder.typicode.com/comments/1"
+            )
+          }
+          resourceName="comments"
+        >
+          <CommentsList />
+        </DataSource>
+      </div> */}
     </>
   );
 };

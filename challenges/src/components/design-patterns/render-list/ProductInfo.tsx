@@ -1,5 +1,4 @@
 //this component can be used as a card to display product info having same shape (T)
-
 interface Props<T> {
   [key: string]: T;
 }
