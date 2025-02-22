@@ -2,104 +2,103 @@
 
 ### Design Patterns challenges
 
-1.  Build a Dashboard Layout
+1. Build a Dashboard Layout
 
-    Steps:
+   Steps:
 
-    - Create `Header` component will contain the dashboard title and profile/logout button
-    - Create `Footer` component with some text.
-    - Create `Sidebar` component, will be a sidebar on the left side with links: home, settings and profile.
-    - Create `Content` component with some stats like total users and revenue, use tailwindcss grid to layout in two columns
-    - Create `SplitScreen` component which will manage layout between the sidebar and content area. This component will accept two children - left and right, width should be controlled through props.
-    - Finally assemble everything in App.tsx.
+   - Create `Header` component, which will contain the dashboard title and profile/logout button.
+   - Create `Footer` component with some text.
+   - Create `Sidebar` component, which will be a sidebar on the left side with links: home, settings, and profile.
+   - Create `Content` component with some stats like total users and revenue. Use Tailwind CSS grid to layout in two columns.
+   - Create `SplitScreen` component, which will manage layout between the sidebar and content area. This component will accept two children—left and right. Width should be controlled through props.
+   - Finally, assemble everything in `App.tsx`.
 
-2.  Product Display Application
+2. Product Display Application
 
-    Create a container component that can dynamically render a list of items based on the props it receives. In this case, you'll be rendering a list of products.
+   Create a container component that can dynamically render a list of items based on the props it receives. In this case, you'll be rendering a list of products.
 
-    Steps:
+   Steps:
 
-    - Create a new component named `RenderList.tsx`
+   - Create a new component named `RenderList.tsx`.
 
-    This component should accept the following props:
+     This component should accept the following props:
 
-    - data: An array of items (products).
-    - resourceName: The name of the resource for the items (e.g., "product").
-    - dataToRender: The component that should be used to render each item ( ProductInfo).
+     - `data`: An array of items (products).
+     - `resourceName`: The name of the resource for the items (e.g., `"product"`).
+     - `dataToRender`: The component that should be used to render each item (`ProductInfo`).
 
-    In the component:
+   - In the component:
 
-    - Use the .map() method to iterate over the data array.
-    - For each item in the list, pass the individual item to the
-    - dataToRender component as a prop (using resourceName to determine the key).
+     - Use the `.map()` method to iterate over the `data` array.
+     - For each item in the list, pass the individual item to the `dataToRender` component as a prop (using `resourceName` to determine the key).
 
-    Now, you need to create a presentational component that will display the details of each individual product. The goal here is to make the UI clean and reusable for any product object passed to it.
+   - Now, you need to create a presentational component that will display the details of each individual product. The goal here is to make the UI clean and reusable for any product object passed to it.
 
-    Steps:
+   Steps:
 
-    - Create a new component named `ProductInfo.tsx`
+   - Create a new component named `ProductInfo.tsx`.
 
-    This component will receive a product prop, which is an object containing:
+     This component will receive a `product` prop, which is an object containing:
 
-    - name
-    - description
-    - price
-    - rating
-    - imageUrl
+     - `name`
+     - `description`
+     - `price`
+     - `rating`
+     - `imageUrl`
 
-    Inside the component
+   - Inside the component:
 
-    - Display the product's imageUrl as an image.
-    - Display the name, description, and price in styled elements.
-    - Render the rating as a series of stars (5 stars total). You can use the Unicode star character (&#9733;) and fill in the stars based on the rating.
+     - Display the `imageUrl` as an image.
+     - Display the `name`, `description`, and `price` in styled elements.
+     - Render the `rating` as a series of stars (5 stars total). You can use the Unicode star character (★) and fill in the stars based on the rating.
 
-    Product Data - Use Sample Data Which Is Already Provided
+   - Product Data - Use sample data which is already provided.
 
-    Main App Component - Render Lists for Each Category
+   - Main App Component - Render Lists for Each Category
 
-    Steps:
+     Steps:
 
-    - In `App.tsx`, import the `RenderList` component and the data arrays (electronics, clothing, homeGoods).
+     - In `App.tsx`, import the `RenderList` component and the data arrays (`electronics`, `clothing`, `homeGoods`).
+     - Render the `RenderList` component for each category (`electronics`, `clothing`, and `homeGoods`).
+     - For each category, pass the respective data array to the `RenderList` component via the `data` prop.
+     - Pass `"product"` as the `resourceName` prop to dynamically pass each product.
+     - Pass `ProductInfo` as the `dataToRender` prop to render the individual product details.
 
-    Render the `RenderList` component for each category (electronics, clothing, and homeGoods).
+3. Container Component Challenge
 
-    - For each category, pass the respective data array to the `RenderList` component via the `data` prop.
-    - Pass "product" as the `resourceName` prop to dynamically pass each product.
-    - Pass `ProductInfo` as the `dataToRender` prop to render the individual product details.
+   Your goal is to implement a reusable data-fetching component in React that can fetch data from an external API and provide it to its child components. This should be done with proper error handling, conditional rendering, and flexibility in how data is passed down to child components.
 
-3.  Container Component Challenge
+   Create a `DataSource` component
 
-Your goal is to implement a reusable data-fetching component in React that can fetch data from an external API and provide it to its child components. This should be done with proper error handling, conditional rendering, and flexibility in how data is passed down to child components.
+   This component should take a `getData` prop that will be used to fetch data. The `getData` function can be asynchronous and will return the data. The `DataSource` component should manage the state for:
 
-Create a `DataSource` component
+   - The fetched data.
+   - An error message in case the data fetch fails.
 
-This component should take a `getData` prop that will be used to fetch data. The getDataFunc function can be asynchronous and will return the data. The `DataSource` component should manage the state for:
+   The component should:
 
-- The fetched data.
-- An error message in case the data fetch fails.
+   - Call `getData` when it mounts and store the fetched data in the state.
+   - Display an error message if the data fetch fails.
+   - Pass the fetched data down to its children as a prop.
+   - The `resourceName` prop should determine the key for the data passed to the child components.
 
-The component should:
+   Create a `ProductList` Component
 
-- Call `getData` when it mounts and store the fetched data in the state.
-- Display an error message if the data fetch fails.
-- Pass the fetched data down to its children as a prop.
-- The `resourceName` prop should determine the key for the data passed to the child components.
+   This component should accept a `products` prop (an array of products) and render a list of product items. Each product should display:
 
-Create a `ProductList` Component
+   - Title
+   - Description
+   - Price
+   - Image
 
-This component should accept a `products` prop (an array of products) and render a list of product items. Each product should display:
+   If the `products` prop is `null` or `undefined`, the component should display a loading message.
 
-- Title
-- Description
-- Price
-- Image
+   Inside the `App` Component
 
-If the `products` prop is `null` or `undefined`, the component should display a loading message.
+   - The `App` component should use the `DataSource` component to fetch data from the external API.
+   - Use a function that returns the data-fetching promise (for example, using Axios) and pass this function to the `DataSource` component.
 
-Inside the `App` Component
+   Use the `DataSource` Component with `ProductList`
 
-The `App` component should use the `DataSource` component to fetch data from the external API. Use a function that returns the data-fetching promise (for example, using axios) and pass this function to the `DataSource` component.
-
-Use the `DataSource` Component with `ProductList`
-
-Inside `App`, use the `DataSource` component to fetch data from an API endpoint like `https://fakestoreapi.com/products.` Pass the `products` data to the `ProductList` component as a prop.
+   - Inside `App`, use the `DataSource` component to fetch data from an API endpoint like `https://fakestoreapi.com/products`.
+   - Pass the `products` data to the `ProductList` component as a prop.
