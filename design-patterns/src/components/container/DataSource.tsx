@@ -12,7 +12,7 @@ const DataSource = <T,>({ getData, resourceName, children }: Props<T>) => {
   const [state, setState] = useState<getDataReturnType<T>>();
 
   useEffect(() => {
-    (async () => {
+    (() => {
       if (getData) {
         getData().then(setState).catch(console.error);
       }

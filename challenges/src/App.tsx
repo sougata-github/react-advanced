@@ -32,7 +32,6 @@ const App = () => {
       <Footer /> */}
 
       {/* Challenge 2 - Product Display Application */}
-
       {/* <div className="grid grid-cols-1 lg:grid-cols-2">
         <RenderList
           data={electronics}
