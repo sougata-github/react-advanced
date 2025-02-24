@@ -22,6 +22,10 @@ import "./App.css";
 // import DataSource from "./components/container/DataSource";
 // import { getServerData } from "./lib";
 
+// controlled and uncontrolled import
+// import UncontrolledForm from "./components/controlled/UncontrolledForm";
+// import ControlledForm from "./components/controlled/ControlledForm";
+
 const App = () => {
   return (
     <>
@@ -72,6 +76,13 @@ const App = () => {
         >
           <CommentsList />
         </DataSource>
+      </div> */}
+
+      {/* Controlled & Uncontrolled components */}
+
+      {/* <div className="flex flex-col gap-4">
+        <UncontrolledForm />
+        <ControlledForm />
       </div> */}
     </>
   );
