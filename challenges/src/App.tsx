@@ -7,16 +7,19 @@ import "./App.css";
 // import Header from "./components/design-patterns/dashboard-layout/Header";
 // import Footer from "./components/design-patterns/dashboard-layout/Footer";
 
-//Product Display imports
+// Product Display imports
 // import ProductInfo from "./components/design-patterns/render-list/ProductInfo";
 // import RenderList from "./components/design-patterns/render-list/RenderList";
 // import { clothing, electronics, homeGoods } from "./data";
 
-//Container imports
+// Container imports
 // import ProductList from "./components/design-patterns/container-component/ProductList";
 // import { Product } from "./components/design-patterns/container-component/ProductInfo";
 // import DataSource from "./components/design-patterns/container-component/DataSource";
 // import { getProductsData } from "./lib";
+
+// Controlled import
+// import ControlledForm from "./components/design-patterns/controlled/ControlledForm";
 
 const App = () => {
   return (
@@ -59,6 +62,9 @@ const App = () => {
       >
         <ProductList />
       </DataSource> */}
+
+      {/* Challenge 4 - Controlled form */}
+      {/* <ControlledForm /> */}
     </div>
   );
 };

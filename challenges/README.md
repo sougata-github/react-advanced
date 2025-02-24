@@ -102,3 +102,13 @@
 
    - Inside `App`, use the `DataSource` component to fetch data from an API endpoint like `https://fakestoreapi.com/products`.
    - Pass the `products` data to the `ProductList` component as a prop.
+
+4. Build a Form with Controlled Components
+
+Create a simple form with the following fields:
+
+- First Name (Text input)
+- Last Name (Text input)
+- Email (Email input)
+- Subscribe to newsletter (Checkbox)
+- Message (Textarea)
