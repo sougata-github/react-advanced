@@ -15,3 +15,9 @@ Container Components are responsible for loading and managing data for their chi
 A controlled component is a form element whose value is controlled by React State. React handles the state of the component and updates it based on user input through event handlers (example: onChange).
 
 Uncontrolled component is a form element that maintains its own internal state, and React does not directly manage or track the value. Instead, we interact with the form element using refs to access its value when needed.
+
+### HOC (Higher Order Components)
+
+Higher Order Component design patter is used to resuse component logic. It is a function that takes a component as an argument and returns a new component that enhances the original one. This pattern allows us to share functionality across multiple components without repeating code.
+
+An HOC does not modify the original component directly, but instead wraps it in a new component, thereby adding additional behaviour or modifying its props.

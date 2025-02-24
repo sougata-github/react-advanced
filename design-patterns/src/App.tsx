@@ -26,6 +26,10 @@ import "./App.css";
 // import UncontrolledForm from "./components/controlled/UncontrolledForm";
 // import ControlledForm from "./components/controlled/ControlledForm";
 
+// hoc import
+// import { EnhancedComponent } from "./components/hoc/withCounter";
+// import { Todo } from "./components/hoc/withTodo";
+
 const App = () => {
   return (
     <>
@@ -84,6 +88,10 @@ const App = () => {
         <UncontrolledForm />
         <ControlledForm />
       </div> */}
+
+      {/* Higher Order Component */}
+      {/* <EnhancedComponent title="Counter" />
+      <Todo title="Todo" /> */}
     </>
   );
 };
