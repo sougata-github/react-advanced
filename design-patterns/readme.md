@@ -9,3 +9,9 @@ Layout components are strategies for organising and composing components that ma
 ### Container Components
 
 Container Components are responsible for loading and managing data for their child components. This pattern is often used in conjunction with Presentational Components to keep UI more modular and maintainable.
+
+### Controlled & Uncontrolled Components
+
+A controlled component is a form element whose value is controlled by React State. React handles the state of the component and updates it based on user input through event handlers (example: onChange).
+
+Uncontrolled component is a form element that maintains its own internal state, and React does not directly manage or track the value. Instead, we interact with the form element using refs to access its value when needed.
