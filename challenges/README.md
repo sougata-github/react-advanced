@@ -105,10 +105,10 @@
 
 4. Build a Form with Controlled Components
 
-Create a simple form with the following fields:
+   Create a simple form with the following fields:
 
-- First Name (Text input)
-- Last Name (Text input)
-- Email (Email input)
-- Subscribe to newsletter (Checkbox)
-- Message (Textarea)
+   - First Name (Text input)
+   - Last Name (Text input)
+   - Email (Email input)
+   - Subscribe to newsletter (Checkbox)
+   - Message (Textarea)
