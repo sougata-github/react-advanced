@@ -1,5 +1,8 @@
 import "./App.css";
 
+import NotAuthorised from "./components/design-patterns/hoc/NotAuthorised";
+import { Auth } from "./components/design-patterns/hoc/withAccessControl";
+
 // Dashboard Layout imports
 // import SplitScreen from "./components/design-patterns/dashboard-layout/SplitScreen";
 // import Sidebar from "./components/design-patterns/dashboard-layout/Sidebar";
@@ -65,6 +68,15 @@ const App = () => {
 
       {/* Challenge 4 - Controlled form */}
       {/* <ControlledForm /> */}
+
+      {/* Challenge 5 - HOC */}
+      <Auth
+        roles={["admin", "moderator"]}
+        fallbackComponent={NotAuthorised}
+        message="Hello, Admin"
+        userName="Sougata"
+        userPermissions={["view", "update", "delete"]}
+      />
     </div>
   );
 };
