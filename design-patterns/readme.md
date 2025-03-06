@@ -21,3 +21,9 @@ Uncontrolled component is a form element that maintains its own internal state, 
 Higher Order Component design patter is used to resuse component logic. It is a function that takes a component as an argument and returns a new component that enhances the original one. This pattern allows us to share functionality across multiple components without repeating code.
 
 An HOC does not modify the original component directly, but instead wraps it in a new component, thereby adding additional behaviour or modifying its props.
+
+### Custom Hooks
+
+Functions that allows us to encapsulate and reuse logic across components and use or more existing hooks. Makes the code more cleaner, more modular, and easier to maintain.
+
+When creating a `custom hook`, you have to start the hook name with `use` ex: useFetch().

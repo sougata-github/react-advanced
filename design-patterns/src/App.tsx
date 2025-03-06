@@ -30,11 +30,14 @@ import "./App.css";
 // import { EnhancedComponent } from "./components/hoc/withCounter";
 // import { Todo } from "./components/hoc/withTodo";
 
+// custom hook imports
+// import WithoutCustomHook from "./components/custom-hook/WithoutCustomHook";
+// import WithCustomHook from "./components/custom-hook/WithCustomHook";
+
 const App = () => {
   return (
     <>
       {/* Layout Pattern*/}
-
       {/* Split Screen */}
       {/* <SplitScreen leftWeight={15} rightWeight={80}>
         <Left />
@@ -60,7 +63,6 @@ const App = () => {
       </Modal> */}
 
       {/* Container Pattern*/}
-
       {/* <div className="flex flex-col gap-4">
         <DataSource
           getData={() =>
@@ -83,7 +85,6 @@ const App = () => {
       </div> */}
 
       {/* Controlled & Uncontrolled components */}
-
       {/* <div className="flex flex-col gap-4">
         <UncontrolledForm />
         <ControlledForm />
@@ -92,6 +93,10 @@ const App = () => {
       {/* Higher Order Component */}
       {/* <EnhancedComponent title="Counter" />
       <Todo title="Todo" /> */}
+
+      {/* Custom Hooks */}
+      {/* <WithoutCustomHook /> */}
+      {/* <WithCustomHook /> */}
     </>
   );
 };
