@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-*: initial;
   --font-sans: "Geist", serif;
@@ -16,5 +18,19 @@
 }
 
 body {
-  @apply overflow-x-hidden;
+  @apply min-h-screen overflow-x-hidden bg-white text-black dark:bg-black dark:text-white;
+}
+
+@keyframes modal-animation {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-modal {
+  animation: modal-animation 0.4s ease-in-out;
 }

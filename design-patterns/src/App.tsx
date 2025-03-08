@@ -1,5 +1,7 @@
 import "./App.css";
 
+import ModalButton from "./components/custom-hook/Modal";
+
 // split screen imports
 // import SplitScreen from "./components/layout/split-screen/SplitScreen";
 // import Right from "./components/layout/split-screen/Right";
@@ -33,10 +35,14 @@ import "./App.css";
 // custom hook imports
 // import WithoutCustomHook from "./components/custom-hook/WithoutCustomHook";
 // import WithCustomHook from "./components/custom-hook/WithCustomHook";
+// import MyForm from "./components/custom-hook/MyForm";
+// import ThemeToggle from "./components/custom-hook/ThemeToggle";
+// import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
   return (
     <>
+      {/* <ThemeProvider> */}
       {/* Layout Pattern*/}
       {/* Split Screen */}
       {/* <SplitScreen leftWeight={15} rightWeight={80}>
@@ -92,11 +98,16 @@ const App = () => {
 
       {/* Higher Order Component */}
       {/* <EnhancedComponent title="Counter" />
-      <Todo title="Todo" /> */}
+        <Todo title="Todo" /> */}
 
       {/* Custom Hooks */}
       {/* <WithoutCustomHook /> */}
       {/* <WithCustomHook /> */}
+      {/* <MyForm /> */}
+      {/* <ThemeToggle />*/}
+      <ModalButton />
+
+      {/* </ThemeProvider> */}
     </>
   );
 };
