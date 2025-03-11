@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 
-import { useOutsideClick } from "../../hooks/useOutisdeClick";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { useModal } from "../../hooks/useModal";
 
 interface Props {
