@@ -1,7 +1,6 @@
 import "./App.css";
 
-import NotAuthorised from "./components/design-patterns/hoc/NotAuthorised";
-import { Auth } from "./components/design-patterns/hoc/withAccessControl";
+import DebouncedInput from "./components/design-patterns/custom-hooks/DebouncedInput";
 
 // Dashboard Layout imports
 // import SplitScreen from "./components/design-patterns/dashboard-layout/SplitScreen";
@@ -23,6 +22,10 @@ import { Auth } from "./components/design-patterns/hoc/withAccessControl";
 
 // Controlled import
 // import ControlledForm from "./components/design-patterns/controlled/ControlledForm";
+
+// hoc import
+// import NotAuthorised from "./components/design-patterns/hoc/NotAuthorised";
+// import { Auth } from "./components/design-patterns/hoc/withAccessControl";
 
 const App = () => {
   return (
@@ -70,13 +73,16 @@ const App = () => {
       {/* <ControlledForm /> */}
 
       {/* Challenge 5 - HOC */}
-      <Auth
+      {/* <Auth
         roles={["admin", "moderator"]}
         fallbackComponent={NotAuthorised}
         message="Hello, Admin"
         userName="Sougata"
         userPermissions={["view", "update", "delete"]}
-      />
+      /> */}
+
+      {/* Challenge 6 - Custom Hooks */}
+      <DebouncedInput />
     </div>
   );
 };

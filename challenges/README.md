@@ -127,3 +127,8 @@
    - Handle default props and dynamic prop injection based on roles.
    - Make sure that TypeScript ensures proper type safety throughout the code.
    - Implement the roles prop properly, ensuring that the injected component only renders for users with the correct roles.
+
+6. Create the following custom hooks
+
+   - usePrevious(): To track the previous value of a variable.
+   - useDebounce(): Debounces a value (useful for input fields that make API calls on change).
