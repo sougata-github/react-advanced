@@ -1,3 +1,10 @@
+import {
+  ComponentConfig,
+  ImageCardProps,
+  ProfileCardProps,
+  TextCardProps,
+} from "../types";
+
 export const games = [
   {
     gameName: "The Elder Scrolls V: Skyrim",
@@ -59,5 +66,32 @@ export const movies = [
     movieDescription:
       "The life story of Forrest Gump, an extraordinary man with a simple heart, whose life intersects with key moments in history.",
     movieRating: 4.7,
+  },
+];
+
+export const cardData: ComponentConfig<
+  ImageCardProps | TextCardProps | ProfileCardProps
+>[] = [
+  {
+    type: "image",
+    data: {
+      src: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Placeholder Image",
+    },
+  },
+  {
+    type: "profile",
+    data: {
+      avatar:
+        "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+      name: "John Doe",
+      bio: "Full Stack Developer",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "This is a sample text card with some placeholder content.",
+    },
   },
 ];

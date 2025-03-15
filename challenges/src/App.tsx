@@ -1,6 +1,7 @@
 import "./App.css";
 
-import DebouncedInput from "./components/design-patterns/custom-hooks/DebouncedInput";
+import ComponentFactory from "./components/design-patterns/factory/ComponentFactory";
+import { factoryData } from "./data";
 
 // Dashboard Layout imports
 // import SplitScreen from "./components/design-patterns/dashboard-layout/SplitScreen";
@@ -26,6 +27,9 @@ import DebouncedInput from "./components/design-patterns/custom-hooks/DebouncedI
 // hoc import
 // import NotAuthorised from "./components/design-patterns/hoc/NotAuthorised";
 // import { Auth } from "./components/design-patterns/hoc/withAccessControl";
+
+//custom hooks
+// import DebouncedInput from "./components/design-patterns/custom-hooks/DebouncedInput";
 
 const App = () => {
   return (
@@ -82,7 +86,14 @@ const App = () => {
       /> */}
 
       {/* Challenge 6 - Custom Hooks */}
-      <DebouncedInput />
+      {/* <DebouncedInput /> */}
+
+      {/* Challenge 7 - Factory */}
+      {factoryData.map(({ type, data }, index) => (
+        <div key={index} className="flex flex-col max-w-md py-8 px-4">
+          {ComponentFactory({ type, data })}
+        </div>
+      ))}
     </div>
   );
 };

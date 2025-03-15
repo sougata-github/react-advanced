@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-type getDataReturnType<T> = T | null;
-
 interface Props<T> {
   getData?: () => Promise<T>;
   resourceName: string;
@@ -9,7 +7,7 @@ interface Props<T> {
 }
 
 const DataSource = <T,>({ getData, resourceName, children }: Props<T>) => {
-  const [state, setState] = useState<getDataReturnType<T>>();
+  const [state, setState] = useState<T | null>();
 
   useEffect(() => {
     (() => {

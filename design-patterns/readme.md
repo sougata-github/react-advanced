@@ -27,3 +27,7 @@ An HOC does not modify the original component directly, but instead wraps it in 
 Functions that allows us to encapsulate and reuse logic across components and use or more existing hooks. Makes the code more cleaner, more modular, and easier to maintain.
 
 When creating a `custom hook`, you have to start the hook name with `use` ex: useFetch().
+
+### Fatory
+
+The Factory Design Pattern is a way to create objects without specifying exactly what kind of object you're creating. It's like having a `factory` that makes objects for us, based on some conditions or inputs.

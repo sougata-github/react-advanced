@@ -1,3 +1,5 @@
+import { ButtonProps, CardProps, ComponentConfig, ModalProps } from "../types";
+
 export const electronics = [
   {
     name: "Smartphone XYZ",
@@ -54,5 +56,36 @@ export const homeGoods = [
     rating: 4.4,
     imageUrl:
       "https://images.unsplash.com/photo-1565536076053-784a322e08eb?q=80&w=3857&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
+export const factoryData: ComponentConfig<
+  ButtonProps | ModalProps | CardProps
+>[] = [
+  {
+    type: "modal",
+    data: {
+      header: "This is a Modal",
+      content: "Modal Content",
+      footer: "Modal footer",
+    },
+  },
+  {
+    type: "button",
+    data: {
+      label: "Click Me",
+      disabled: false,
+      onClick: () => {
+        alert("Button Clicked!");
+      },
+    },
+  },
+  {
+    type: "card",
+    data: {
+      title: "This is a Card",
+      content: "Card Content",
+      footer: "Card footer",
+    },
   },
 ];

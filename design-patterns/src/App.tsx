@@ -1,6 +1,9 @@
 import "./App.css";
 
-import ModalButton from "./components/custom-hook/Modal";
+import React from "react";
+
+import CardFactory from "./components/factory/CardFactory";
+import { cardData } from "./data";
 
 // split screen imports
 // import SplitScreen from "./components/layout/split-screen/SplitScreen";
@@ -38,6 +41,10 @@ import ModalButton from "./components/custom-hook/Modal";
 // import MyForm from "./components/custom-hook/MyForm";
 // import ThemeToggle from "./components/custom-hook/ThemeToggle";
 // import { ThemeProvider } from "./context/ThemeContext";
+// import ModalButton from "./components/custom-hook/Modal";
+
+// factory imports
+// import ButtonFactory from "./components/factory/ButtonFactory";
 
 const App = () => {
   return (
@@ -105,7 +112,20 @@ const App = () => {
       {/* <WithCustomHook /> */}
       {/* <MyForm /> */}
       {/* <ThemeToggle />*/}
-      <ModalButton />
+      {/* <ModalButton /> */}
+
+      {/* Factory */}
+      {/* <div className="p-4">{ButtonFactory("primary", "Click Me")}</div>
+      <div className="p-4">{ButtonFactory("secondary", "Click Me")}</div>
+      <div className="p-4">{ButtonFactory("danger", "Click Me")}</div> */}
+
+      <div className="flex flex-col items-center gap-4 p-6">
+        {cardData.map(({ type, data }, index) => (
+          <React.Fragment key={index}>
+            {CardFactory({ type, data })}
+          </React.Fragment>
+        ))}
+      </div>
 
       {/* </ThemeProvider> */}
     </>
