@@ -9,7 +9,6 @@ const CardFactory = <T,>({ type, data }: ComponentConfig<T>) => {
   switch (type) {
     case "image":
       return <ImageCard {...(data as ImageCardProps)} />;
-
     case "profile":
       return <ProfileCard {...(data as ProfileCardProps)} />;
     case "text":

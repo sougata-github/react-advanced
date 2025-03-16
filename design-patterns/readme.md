@@ -31,3 +31,9 @@ When creating a `custom hook`, you have to start the hook name with `use` ex: us
 ### Fatory
 
 The Factory Design Pattern is a way to create objects without specifying exactly what kind of object you're creating. It's like having a `factory` that makes objects for us, based on some conditions or inputs.
+
+### Compound Component
+
+The Compound Component Design Pattern allows for creating more flexible, resuable, and easy-to-combine components. It involves splitting a complex component into smaller, individual subcomponents that can be used together but maintain some degree of internal control over their behaviour.
+
+This pattern is useful when you want to create a component that has multiple subcomponents, but you want to maintain the ability to customise or control the behaviour of each subcomponent from the parent or container.

@@ -1,9 +1,6 @@
 import "./App.css";
 
-import React from "react";
-
-import CardFactory from "./components/factory/CardFactory";
-import { cardData } from "./data";
+import Card from "./components/compound-component/Card";
 
 // split screen imports
 // import SplitScreen from "./components/layout/split-screen/SplitScreen";
@@ -45,6 +42,8 @@ import { cardData } from "./data";
 
 // factory imports
 // import ButtonFactory from "./components/factory/ButtonFactory";
+// import CardFactory from "./components/factory/CardFactory";
+// import { cardData } from "./data";
 
 const App = () => {
   return (
@@ -119,12 +118,20 @@ const App = () => {
       <div className="p-4">{ButtonFactory("secondary", "Click Me")}</div>
       <div className="p-4">{ButtonFactory("danger", "Click Me")}</div> */}
 
-      <div className="flex flex-col items-center gap-4 p-6">
+      {/* <div className="flex flex-col items-center gap-4 p-6">
         {cardData.map(({ type, data }, index) => (
           <React.Fragment key={index}>
             {CardFactory({ type, data })}
           </React.Fragment>
         ))}
+      </div> */}
+
+      <div className="p-20">
+        <Card>
+          <Card.Title>Card title</Card.Title>
+          <Card.Content>Card Content</Card.Content>
+          <Card.Footer>Card footer</Card.Footer>
+        </Card>
       </div>
 
       {/* </ThemeProvider> */}
