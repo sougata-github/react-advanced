@@ -158,3 +158,8 @@
    - Ensure that the `ComponentFactory` can render the correct component based on the configuration at runtime.
 
    - The configuration should be passed into the factory, and based on the type (e.g., `Button`, `Card`, `Modal`), the correct component should be rendered.
+
+8. Build a Modal Component using Compound Component Design Pattern
+
+   - A modal container that can house multiple child components
+   - A way to control the visibility of the modal.

@@ -23,3 +23,16 @@ button,
 input {
   cursor: pointer;
 }
+
+@keyframes modal-animation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-modal {
+  animation: modal-animation 0.4s ease-in-out;
+}

@@ -1,7 +1,6 @@
 import "./App.css";
 
-import ComponentFactory from "./components/design-patterns/factory/ComponentFactory";
-import { factoryData } from "./data";
+import Modal from "./components/design-patterns/compound-component/Modal";
 
 // Dashboard Layout imports
 // import SplitScreen from "./components/design-patterns/dashboard-layout/SplitScreen";
@@ -24,19 +23,23 @@ import { factoryData } from "./data";
 // Controlled import
 // import ControlledForm from "./components/design-patterns/controlled/ControlledForm";
 
-// hoc import
+// Hoc import
 // import NotAuthorised from "./components/design-patterns/hoc/NotAuthorised";
 // import { Auth } from "./components/design-patterns/hoc/withAccessControl";
 
-//custom hooks
+// Custom hooks
 // import DebouncedInput from "./components/design-patterns/custom-hooks/DebouncedInput";
+
+// Compound component
+// import ComponentFactory from "./components/design-patterns/factory/ComponentFactory";
+// import { factoryData } from "./data";
 
 const App = () => {
   return (
     <div className="flex flex-col h-screen">
       {/* Design Pattern Challenges */}
 
-      {/* Challenge 1 - Dashboard Layout */}
+      {/* Challenge 1 - Layout */}
       {/* <Header />
       <SplitScreen leftWeight={3} rightWeight={60}>
         <Sidebar />
@@ -89,11 +92,14 @@ const App = () => {
       {/* <DebouncedInput /> */}
 
       {/* Challenge 7 - Factory */}
-      {factoryData.map(({ type, data }, index) => (
+      {/* {factoryData.map(({ type, data }, index) => (
         <div key={index} className="flex flex-col max-w-md py-8 px-4">
           {ComponentFactory({ type, data })}
         </div>
-      ))}
+      ))} */}
+
+      {/* Challenge 8 - Compound Component */}
+      <Modal />
     </div>
   );
 };
