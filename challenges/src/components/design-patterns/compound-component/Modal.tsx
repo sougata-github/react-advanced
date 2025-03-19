@@ -1,6 +1,5 @@
 import ModalProvider from "./ModalProvider";
 
-
 const Modal = () => {
   return (
     <div className="p-20">
