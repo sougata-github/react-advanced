@@ -1,7 +1,5 @@
 import "./App.css";
 
-import Card from "./components/compound-component/Card";
-
 // split screen imports
 // import SplitScreen from "./components/layout/split-screen/SplitScreen";
 // import Right from "./components/layout/split-screen/Right";
@@ -44,6 +42,16 @@ import Card from "./components/compound-component/Card";
 // import ButtonFactory from "./components/factory/ButtonFactory";
 // import CardFactory from "./components/factory/CardFactory";
 // import { cardData } from "./data";
+
+// compound component imports
+// import Card from "./components/compound/Card";
+
+// slots imports
+// import DefaultSlot from "./components/slots/DefaultSlot";
+// import NamedSlot from "./components/slots/NamedSlot";
+// import CompoundSlot from "./components/slots/CompoundSlot";
+// import ContextSlot from "./components/slots/ContextSlot";
+// import { SlotProvider } from "./context/SlotContext";
 
 const App = () => {
   return (
@@ -126,13 +134,29 @@ const App = () => {
         ))}
       </div> */}
 
-      <div className="p-20">
+      {/* Compound Component Pattern */}
+      {/* <div className="p-20">
         <Card>
           <Card.Title>Card title</Card.Title>
           <Card.Content>Card Content</Card.Content>
           <Card.Footer>Card footer</Card.Footer>
         </Card>
-      </div>
+      </div> */}
+
+      {/* Slots */}
+      {/* Default Slots */}
+      {/* <DefaultSlot /> */}
+
+      {/* Named Slots */}
+      {/* <NamedSlot /> */}
+
+      {/* Compound Slots */}
+      {/* <CompoundSlot /> */}
+
+      {/* Context Slots */}
+      {/* <SlotProvider>
+        <ContextSlot />
+      </SlotProvider> */}
 
       {/* </ThemeProvider> */}
     </>

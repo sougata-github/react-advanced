@@ -37,3 +37,23 @@ The Factory Design Pattern is a way to create objects without specifying exactly
 The Compound Component Design Pattern allows for creating more flexible, resuable, and easy-to-combine components. It involves splitting a complex component into smaller, individual subcomponents that can be used together but maintain some degree of internal control over their behaviour.
 
 This pattern is useful when you want to create a component that has multiple subcomponents, but you want to maintain the ability to customise or control the behaviour of each subcomponent from the parent or container.
+
+### Slots
+
+Slots design pattern allows a component to accept dynamic content from its parent, and place that content into specific areas or sections of the component. Slots are not a formal or native concept like some other patterns in React.js.
+
+- Default Slots
+
+  Default slot is known as children property.
+
+- Named Slots
+
+  Named slots/props are simply properties that we pass to a component, each with a specific, descriptive name.
+
+- Compound Slots
+
+  The slots pattern can be applied to compound component by defining "named slots" (using props) and allowing child components to customise specific areas of a compound component.
+
+- Slots With Context
+
+  Slots with Context Api.

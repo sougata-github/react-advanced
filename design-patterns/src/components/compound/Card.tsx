@@ -1,6 +1,6 @@
 const Card = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="max-w-md rounded-lg p-4 shadow hover:-translate-y-1.5 transition duration-200 cursor-pointer">
+    <div className="max-w-xs rounded-lg p-4 shadow hover:-translate-y-1.5 transition duration-200 cursor-pointer">
       {children}
     </div>
   );
