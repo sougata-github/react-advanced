@@ -34,3 +34,16 @@ export type ComponentConfig<T> = {
   type: "button" | "card" | "modal";
   data: T;
 };
+
+export interface Column<T> {
+  key: keyof T;
+  header: string;
+  render?: (value: T[keyof T]) => React.ReactNode;
+}
+
+export type User = {
+  id: string;
+  name: string;
+  username: string;
+  email: string;
+};

@@ -188,3 +188,5 @@ Error Handling
 - While the data is being fetched, show a "Loading..." message.
 - Once the data is fetched, render the list of users.
 - If there's an error (e.g., wrong URL or network issue), show an error message.
+
+Also build a resuable `users` table component.

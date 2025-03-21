@@ -1,4 +1,13 @@
-import { ButtonProps, CardProps, ComponentConfig, ModalProps } from "../types";
+import React from "react";
+
+import {
+  ButtonProps,
+  CardProps,
+  Column,
+  ComponentConfig,
+  ModalProps,
+  User,
+} from "../types";
 
 export const electronics = [
   {
@@ -87,5 +96,30 @@ export const factoryData: ComponentConfig<
       content: "Card Content",
       footer: "Card footer",
     },
+  },
+];
+
+export const COLUMNS: Column<User>[] = [
+  {
+    key: "id",
+    header: "ID",
+  },
+  {
+    key: "name",
+    header: "Name",
+  },
+  {
+    key: "username",
+    header: "Username",
+  },
+  {
+    key: "email",
+    header: "Email",
+    render: (email) =>
+      React.createElement(
+        "a",
+        { href: `mailto:${email}`, className: "text-blue-500 underline" },
+        email
+      ),
   },
 ];

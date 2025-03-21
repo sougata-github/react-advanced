@@ -1,7 +1,6 @@
 import "./App.css";
 
-import DataFetcher from "./components/design-patterns/render-props/DataFetcher";
-import User from "./components/design-patterns/render-props/User";
+import Users from "./components/design-patterns/render-props/Users";
 
 // Dashboard Layout imports
 // import SplitScreen from "./components/design-patterns/dashboard-layout/SplitScreen";
@@ -39,6 +38,8 @@ import User from "./components/design-patterns/render-props/User";
 // import Modal from "./components/design-patterns/compound-component/Modal";
 
 // Render Props imports
+// import DataFetcher from "./components/design-patterns/render-props/DataFetcher";
+// import User from "./components/design-patterns/render-props/User";
 
 const App = () => {
   return (
@@ -108,10 +109,11 @@ const App = () => {
       {/* <Modal /> */}
 
       {/* Challenge 9 - Render Props */}
-      <DataFetcher
+      {/* <DataFetcher
         url="https://jsonplaceholder.typicode.com/users"
         render={(user: { name: string }) => <User name={user.name} />}
-      />
+      /> */}
+      <Users />
     </div>
   );
 };
