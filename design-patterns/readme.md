@@ -57,3 +57,7 @@ Slots design pattern allows a component to accept dynamic content from its paren
 - Slots With Context
 
   Slots with Context Api.
+
+### Render Props
+
+Render Props pattern is used to share code between components by passing a `function as a prop` to a component. The function which typically referred to as `render prop` returns a React element that gets rendered. This pattern allows components to be more flexible and resuable, as parent component can control the rendering of content in its child component.

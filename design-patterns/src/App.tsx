@@ -53,6 +53,10 @@ import "./App.css";
 // import ContextSlot from "./components/slots/ContextSlot";
 // import { SlotProvider } from "./context/SlotContext";
 
+// render props imports
+// import MouseTracker from "./components/render-props/MouseTracker";
+// import Counter from "./components/render-props/Counter";
+
 const App = () => {
   return (
     <>
@@ -157,6 +161,20 @@ const App = () => {
       {/* <SlotProvider>
         <ContextSlot />
       </SlotProvider> */}
+
+      {/* Render Props */}
+      {/* <div className="p-20">
+        <Counter
+          render={(count: number) => <p>The current count is: {count}</p>}
+        />
+        <MouseTracker
+          render={(position: { x: number; y: number }) => (
+            <p>
+              Mouse is at X: {position.x}, Y: {position.y}{" "}
+            </p>
+          )}
+        />
+      </div> */}
 
       {/* </ThemeProvider> */}
     </>
