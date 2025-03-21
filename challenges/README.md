@@ -163,3 +163,28 @@
 
    - A modal container that can house multiple child components
    - A way to control the visibility of the modal.
+
+9. Create a "Data Fetching" Component using Render Props
+
+You need to create a reusable `DataFetcher` component that fetches data from an API and passes the data to its child component using the Render Props pattern. The child component will receive the data and can render it however it chooses.
+
+DataFetcher Component
+
+- The DataFetcher component should take a URL as a prop and fetch data from that URL.
+  It should use useEffect to fetch the data and store it in a state.
+  While the data is being fetched, the component should show a loading spinner or message.
+  Once the data is fetched, the component should pass the data to the child through a render prop.
+
+Render Prop
+
+- The child component receives the data via the render prop and renders it however it wishes.
+
+- The render prop should be typed, ensuring type safety.
+
+Error Handling
+
+- If there’s an error fetching the data (e.g., network issue, invalid URL), display an error message.
+
+- While the data is being fetched, show a "Loading..." message.
+- Once the data is fetched, render the list of users.
+- If there's an error (e.g., wrong URL or network issue), show an error message.

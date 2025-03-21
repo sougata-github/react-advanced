@@ -1,6 +1,7 @@
 import "./App.css";
 
-import Modal from "./components/design-patterns/compound-component/Modal";
+import DataFetcher from "./components/design-patterns/render-props/DataFetcher";
+import User from "./components/design-patterns/render-props/User";
 
 // Dashboard Layout imports
 // import SplitScreen from "./components/design-patterns/dashboard-layout/SplitScreen";
@@ -23,16 +24,21 @@ import Modal from "./components/design-patterns/compound-component/Modal";
 // Controlled import
 // import ControlledForm from "./components/design-patterns/controlled/ControlledForm";
 
-// Hoc import
+// Hoc imports
 // import NotAuthorised from "./components/design-patterns/hoc/NotAuthorised";
 // import { Auth } from "./components/design-patterns/hoc/withAccessControl";
 
-// Custom hooks
+// Custom hooks imports
 // import DebouncedInput from "./components/design-patterns/custom-hooks/DebouncedInput";
 
-// Compound component
+// Factory imports
 // import ComponentFactory from "./components/design-patterns/factory/ComponentFactory";
 // import { factoryData } from "./data";
+
+// Compound Component imports
+// import Modal from "./components/design-patterns/compound-component/Modal";
+
+// Render Props imports
 
 const App = () => {
   return (
@@ -99,7 +105,13 @@ const App = () => {
       ))} */}
 
       {/* Challenge 8 - Compound Component */}
-      <Modal />
+      {/* <Modal /> */}
+
+      {/* Challenge 9 - Render Props */}
+      <DataFetcher
+        url="https://jsonplaceholder.typicode.com/users"
+        render={(user: { name: string }) => <User name={user.name} />}
+      />
     </div>
   );
 };
