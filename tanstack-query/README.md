@@ -19,3 +19,15 @@ A function that helps us fetch and manage server data in our application.
 ### Deduplication
 
 It means that if we try to fetch same data multiple times at once, it will only send one request instead of many. Deduplication helps avoid asking for the same data over and over again.
+
+### Stale Time
+
+Stale time refers to the duration during which cached data remains fresh. During this period, the data is served from the cache without triggering a background refetch, which can improve performance and reduce unnecessary network requests.
+
+### refetchInterval
+
+It is an option used to automatically refetch data at a specified interval. It allows us to keep our data fresh without requiring manual intervention.
+
+### useQueries
+
+useQueries is a hook that allows us to execute multiple queries in parallel and manage their results in a unified way. This is a useful when you need to fetch data from multipe sources or endpoints in a single component but want to handle each query's state separately.
