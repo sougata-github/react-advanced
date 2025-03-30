@@ -76,7 +76,7 @@ const App = () => {
       {/* Challenge 3 - Container Component */}
       {/* <DataSource
         getData={() =>
-          getProductsData<Product[]>("https://fakestoreapi.com/products")
+          getProductsData<Product>("https://fakestoreapi.com/products")
         }
         resourceName="products"
       >

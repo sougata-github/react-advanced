@@ -9,7 +9,7 @@ const Counter = ({
 
   return (
     <div>
-      <p>{render(count)}</p>
+      {render(count)}
       <button
         className="mt-2 bg-black/5 rounded-lg p-2 w-fit"
         onClick={() => setCount((prev) => prev + 1)}
