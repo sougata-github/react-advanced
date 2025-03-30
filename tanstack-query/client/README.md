@@ -31,3 +31,12 @@ It is an option used to automatically refetch data at a specified interval. It a
 ### useQueries
 
 useQueries is a hook that allows us to execute multiple queries in parallel and manage their results in a unified way. This is a useful when you need to fetch data from multipe sources or endpoints in a single component but want to handle each query's state separately.
+
+### useMutation
+
+useMutation is a hook used to handle mutative operations that create, update and delete data on a backend or remote server. Unlike useQuery, which is used for fetching and caching data, useMutation is specifically designed for actions that change data.
+
+- onMutate: called cancelled before the mutation function is fired
+- onError: handles errors
+- onSucess: handles success
+- onSettled: called once the mutation either succeeds or fails
