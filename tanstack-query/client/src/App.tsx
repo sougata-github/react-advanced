@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ErrorBoundary } from "react-error-boundary";
 
+import Pagination from "./components/Pagination";
 // import UseQueries from "./components/UseQueries";
 // import RefetchInterval from "./components/RefetchInterval";
 // import WithoutTanstackQuery from "./components/WithoutTanstackQuery";
@@ -30,6 +31,7 @@ const App = () => {
           {/* <RefetchInterval /> */}
           {/* <UseQueries /> */}
           {/* <Mutation /> */}
+          <Pagination />
         </div>
       </ErrorBoundary>
     </QueryClientProvider>
