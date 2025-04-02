@@ -40,3 +40,7 @@ useMutation is a hook used to handle mutative operations that create, update and
 - onError: handles errors
 - onSucess: handles success
 - onSettled: called once the mutation either succeeds or fails
+
+### invalidateQueries
+
+Refetches data when mutation takes place (event driven). The idea is to display slightly outdated data when a background refetch is triggered.
