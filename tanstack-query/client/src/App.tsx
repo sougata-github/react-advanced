@@ -4,7 +4,8 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ErrorBoundary } from "react-error-boundary";
 
-import Pagination from "./components/Pagination";
+import InfiniteScroll from "./components/InfiniteScroll";
+// import Pagination from "./components/Pagination";
 // import UseQueries from "./components/UseQueries";
 // import RefetchInterval from "./components/RefetchInterval";
 // import WithoutTanstackQuery from "./components/WithoutTanstackQuery";
@@ -19,7 +20,11 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <ErrorBoundary
-        fallback={<p>Oops! An error occured. Please try again later.</p>}
+        fallback={
+          <p className="p-20">
+            Oops! An error occured. Please try again later.
+          </p>
+        }
       >
         <ReactQueryDevtools initialIsOpen={false} />
         <div>
@@ -31,7 +36,8 @@ const App = () => {
           {/* <RefetchInterval /> */}
           {/* <UseQueries /> */}
           {/* <Mutation /> */}
-          <Pagination />
+          {/* <Pagination /> */}
+          <InfiniteScroll />
         </div>
       </ErrorBoundary>
     </QueryClientProvider>
