@@ -58,11 +58,19 @@ const InfiniteScroll = () => {
             </p>
           ))
         )}
-        {isFetchingNextPage && (
-          <div className="w-full flex items-center justify-center h-4">
-            <Loader className="animate-spin transition size-4" />
-          </div>
+
+        {hasNextPage ? (
+          isFetchingNextPage && (
+            <div className="w-full flex items-center justify-center h-4">
+              <Loader className="animate-spin transition size-4" />
+            </div>
+          )
+        ) : (
+          <p className="text-sm text-center my-2 text-gray-400">
+            You have reached the end of the list.
+          </p>
         )}
+
         <div ref={targetRef} className="h-4" />
         {/*should be last element inside
         the container */}
