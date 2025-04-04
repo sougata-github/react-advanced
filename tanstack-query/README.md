@@ -36,7 +36,6 @@ useQueries is a hook that allows us to execute multiple queries in parallel and 
 
 useMutation is a hook used to handle mutative operations that create, update and delete data on a backend or remote server. Unlike useQuery, which is used for fetching and caching data, useMutation is specifically designed for actions that change data.
 
-- onMutate: called before the mutation function is fired
 - onError: handles errors
 - onSuccess: handles success
 - onSettled: called once the mutation either succeeds or fails
