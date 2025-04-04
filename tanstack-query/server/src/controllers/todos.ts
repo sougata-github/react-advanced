@@ -40,7 +40,7 @@ export async function updateTodo(req: Request, res: Response) {
     });
     res.status(201).json(updatedTodo);
   } catch (error) {
-    res.status(500).json({ message: "Couldn't create todo" });
+    res.status(500).json({ message: "Couldn't update todo" });
   }
 }
 
@@ -54,6 +54,6 @@ export async function removeTodo(req: Request, res: Response) {
     });
     res.status(200).json(removedTodo);
   } catch (error) {
-    res.status(500).json({ message: "Couldn't create todo" });
+    res.status(500).json({ message: "Couldn't remove todo" });
   }
 }
