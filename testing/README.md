@@ -47,3 +47,31 @@ describe("Description", () => {
   });
 });
 ```
+
+### AAA Pattern
+
+- Arrange
+
+  Set up everything for the test. (variables, mock data, etc)
+
+- Act
+
+  Perform the action that you want to test. (ex: call a function)
+
+- Assert
+
+  Verify that the result of the action is what you expect.
+
+```typescript
+test("should add two numbers", () => {
+  //Arrange: Set up data
+  const a = 1;
+  const b = 1;
+
+  //Act: Perform the action (call the function)
+  const result = a + b;
+
+  //Assert: Verify the result
+  expect(result).toBe(2);
+});
+```

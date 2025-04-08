@@ -27,4 +27,16 @@ describe("Math utilities", () => {
     //callback so that error is not thrown immediately so that test doesn't crash before it runs
     expect(() => divide(2, 0)).toThrow("Division by zero is not allowed");
   });
+
+  //AAA pattern
+  test("adds two numbers", () => {
+    //arrange
+    const [a, b] = [1, 1];
+
+    //act
+    const result = a + b;
+
+    //assert
+    expect(result).toBe(2);
+  });
 });
