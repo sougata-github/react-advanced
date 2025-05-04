@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 //math utils
 export const add = (a: number, b: number) => a + b;
 export const subtract = (a: number, b: number) => a - b;
@@ -59,3 +60,21 @@ export const intersectArray = (arr1: number[], arr2: number[]): number[] => {
 };
 
 //concat flattens one level and then adds values, but push adds values as it is.
+
+//object utils
+
+//will override common properties
+export const mergeObjects = (
+  obj1: Record<any, any>,
+  obj2: Record<any, any>
+): Record<any, any> => {
+  return { ...obj1, ...obj2 };
+};
+
+export const deepClone = (obj: Record<any, any>): Record<any, any> => {
+  return JSON.parse(JSON.stringify(obj));
+};
+
+export const deepEqual = (obj1: Record<any, any>, obj2: Record<any, any>) => {
+  return JSON.stringify(obj1) === JSON.stringify(obj2);
+};

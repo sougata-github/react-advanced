@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 //math utils
 export const factorial = (n: number) => {
   if (n < 0) throw new Error("Cannot compute factorial for negative number.");
@@ -80,3 +81,39 @@ export const intersectArray = (arr1: number[], arr2: number[]): number[] => {
 };
 
 //concat flattens one level and then adds values, but push adds values as it is.
+
+//object utils
+
+export const deepMerge = (obj1: Record<any, any>, obj2: Record<any, any>) => {
+  const result = { ...obj1 };
+
+  for (const key in obj2) {
+    if ((obj2[key] as any) instanceof Object && key in obj1) {
+      result[key] = deepMerge(obj1[key], obj2[key]);
+    } else {
+      result[key] = obj2[key];
+    }
+  }
+
+  return result;
+};
+
+export const deepClone = (obj: Record<any, any>) => {
+  return JSON.parse(JSON.stringify(obj));
+};
+
+export const deepFlatten = (obj: Record<any, any>, prefix = "") => {
+  let result: Record<any, any> = {};
+
+  for (const key in obj) {
+    const newKey = prefix ? `${prefix}.${key}` : key;
+
+    if (obj[key] && typeof obj[key] === "object") {
+      result = { ...result, ...(deepFlatten(obj[key], newKey) as any) };
+    } else {
+      result[newKey] = obj[key];
+    }
+  }
+
+  return result;
+};
